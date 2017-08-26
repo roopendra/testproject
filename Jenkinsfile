@@ -1,17 +1,7 @@
-pipeline {
-    agent any 
+node {
+	stage 'Checkout'
+		checkout scm
 
-    stages {
-        stage('Build') { 
-            steps { 
-                'mvn clean build'
-            }
-        }
-        stage('Test'){
-            steps {
-                'mvn test'
-            }
-        }
-
-    }
+	stage 'Build'
+		bat 'mvn clean build'
 }
