@@ -1,14 +1,20 @@
 package com.roop;
+/**
+ * Hello world!
+ */
+public class App
+{
 
-import org.junit.Assert;
-import org.junit.Test;
+    private final String message = "Hello World!";
 
-public class AppTest {
+    public App() {}
 
-	@Test
-	public void testLengthOfTheUniqueKey() {
-		App obj = new App();
-		Assert.assertEquals(36, obj.generateUniqueKey().length());
+    public static void main(String[] args) {
+        System.out.println(new App().getMessage());
+    }
 
-	}
+    private final String getMessage() {
+        return message;
+    }
+
 }
